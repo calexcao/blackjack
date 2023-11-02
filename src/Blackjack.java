@@ -186,8 +186,11 @@ public class Blackjack {
     }
 
     public void startGame(){
-
-        if(deck.getDeck().size() < 10) deck = new Deck();
+        
+        if(deck.getDeck().size() < 10) {
+            deck = new Deck();
+            deck.shuffle();
+        }
 
         balance -= 100;
         //build deck
